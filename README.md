@@ -1,21 +1,17 @@
 # Project 3: Spots
 
-### Overview  
+This project is a social media app called Spots. the main purpose of this project is to practice responsive web design utilizing both HTML and CSS so that the app both functions and looks great on all standard resolutions.
 
-* Intro  
-* Figma  
-* Images  
-  
-**Intro**
-  
-This project is made so all the elements are displayed correctly on popular screen sizes. We recommend investing more time in completing this project, since it's more difficult than previous ones.  
-  
-**Figma**  
-  
-* [Link to the project on Figma](https://www.figma.com/file/BBNm2bC3lj8QQMHlnqRsga/Sprint-3-Project-%E2%80%94-Spots?type=design&node-id=2%3A60&mode=design&t=afgNFybdorZO6cQo-1)
-  
-**Images**  
-  
-The way you'll do this at work is by exporting images directly from Figma — we recommend doing that to practice more. Don't forget to optimize them [here](https://tinypng.com/), so your project loads faster. 
-  
-Good luck and have fun!
+this project was done exclusively using HTML and CSS (though it was a collaberation project through figma)
+
+![screenshot of site at 1280 width](image.png)
+
+![screenshot of site at 768px width](image-1.png)
+
+![screenshot at site 320px width](image-2.png)
+
+in the images above you can see the sites responsive design and the changes it makes at different resolutions, you can also view the site yourself using the link below
+
+https://chimichimi123.github.io/se_project_spots/
+
+for future improvements I plan to add accounts with a login and password hashing, a backend so that the site can be interacted with and SQLAlchemy to store data such as account information and users liked posts or their own posts.

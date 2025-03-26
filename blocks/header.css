@@ -4,6 +4,11 @@
   align-items: center;
   background-color: #fff;
   padding: 10px 0;
-  max-width: 100%;
   width: 100%;
+}
+
+.header__logo {
+  width: 94px;
+  height: 26px;
+  object-fit: contain;
 }
