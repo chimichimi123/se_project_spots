@@ -14,4 +14,8 @@ in the images above you can see the sites responsive design and the changes it m
 
 https://chimichimi123.github.io/se_project_spots/
 
+you can use the link below to watch me give an explanation of the site and briefly walkthrough it.
+
+https://drive.google.com/file/d/1ZBR9-QdWD0D7KRr_oQiT-i8IQgb2X96M/view?usp=sharing
+
 for future improvements I plan to add accounts with a login and password hashing, a backend so that the site can be interacted with and SQLAlchemy to store data such as account information and users liked posts or their own posts.
