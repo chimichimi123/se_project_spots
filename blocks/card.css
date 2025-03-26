@@ -9,7 +9,7 @@
   font-weight: 500;
   color: #212121;
   white-space: nowrap;
-  max-width: 200px;
+  max-width: 353px;
 }
 
 .card__image {
@@ -32,7 +32,7 @@
 }
 
 .card__like-btn:hover {
-  opacity: 0.7;
+  opacity: 1;
 }
 
 .card__content {
@@ -44,10 +44,14 @@
 @media screen and (max-width: 627px) {
   .card__title {
     font-size: 16px;
+    max-width: 200px;
+    line-height: 100%;
   }
 
   .card__like-btn {
     width: 20px;
+    contain: content;
+    background-repeat: no-repeat;
   }
 
   .card__image {

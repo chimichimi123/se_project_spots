@@ -94,10 +94,6 @@
   transition: opacity 0.3s ease-in-out;
 }
 
-.profile__new-post-btn {
-  transition: filter 0.3s ease-in-out;
-}
-
 .profile__new-post:hover {
   opacity: 0.8;
 }
