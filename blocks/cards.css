@@ -15,7 +15,7 @@
   border-bottom: 1px solid #21212166;
 }
 
-@media screen and (max-width: 1660px) {
+@media screen and (max-width: 1000px) {
   .cards__list {
     grid-template-columns: repeat(2, minmax(200px, 1fr));
   }
