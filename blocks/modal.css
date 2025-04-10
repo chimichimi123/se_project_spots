@@ -1,0 +1,135 @@
+.modal {
+  visibility: hidden;
+  background-color: #00000080;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif, Arial, Helvetica;
+}
+
+.modal_is-opened {
+  visibility: visible;
+}
+
+.modal__container {
+  max-width: 730px;
+  min-width: 630px;
+  width: 100%;
+  border-radius: 8px;
+  background-color: #fff;
+  padding: 32px 50px;
+  position: relative;
+}
+
+.modal__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.modal__close-btn {
+  border: 0;
+  background: none;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.modal__close-btn-icon {
+  width: 23px;
+  height: 23px;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+}
+
+.modal__title {
+  margin: 0;
+  font-family: "Poppins", sans-serif, Arial, Helvetica;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1;
+}
+
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.modal__label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.1;
+}
+
+.modal__input {
+  max-width: 100%;
+  display: block;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.modal__input::placeholder {
+  color: #2121214d;
+}
+
+.modal__submit-btn {
+  max-width: 156px;
+  background: #212121;
+  padding: 18px 32px;
+  border-radius: 8px;
+  color: #fcf5e5;
+}
+
+@media screen and (max-width: 1100px) {
+  .modal__input {
+    font-size: clamp(0.5rem, 7vw, 1.2rem);
+  }
+
+  .modal__container {
+    width: 57%;
+    min-width: 30%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .modal__container {
+    padding: 12px;
+    min-width: 300px;
+  }
+
+  .modal__title {
+    font-size: 20px;
+  }
+
+  .modal__input {
+    font-size: 16px;
+  }
+
+  .modal__submit-btn {
+    align-self: normal;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .modal__container {
+    min-width: 0;
+    max-width: 100%;
+    width: 85%;
+  }
+}
