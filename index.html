@@ -121,7 +121,7 @@
       <footer class="footer">
         <p class="footer__text">2025 © Spots</p>
       </footer>
-      <div class="modal">
+      <div class="modal" id="edit-profile-modal">
         <div class="modal__container">
           <div class="modal__header">
             <h2 class="modal__title">Edit profile</h2>
@@ -157,8 +157,8 @@
         </div>
       </div>
     </div>
-    <div class="modal modal_is-opened">
-      <div class="modal__container">
+    <div class="modal">
+      <div class="modal__container" id="new-post-modal">
         <div class="modal__header">
           <h2 class="modal__title">New post</h2>
           <button type="button" class="modal__close-btn">
@@ -192,5 +192,6 @@
         </form>
       </div>
     </div>
+    <script src="scripts/index.js" type="module"></script>
   </body>
 </html>
