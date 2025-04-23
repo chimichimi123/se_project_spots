@@ -9,7 +9,7 @@ const editProfileDescriptionInput = editProfileModal.querySelector(
 );
 const editProfileForm = editProfileModal.querySelector(".modal__form");
 
-const newPostBtn = document.querySelector(".profile__new-post-btn");
+const newPostBtn = document.querySelector(".profile__new-post");
 const newPostModal = document.querySelector("#new-post-modal");
 const newPostCloseBtn = newPostModal.querySelector(".modal__close-btn");
 
