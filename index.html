@@ -10,11 +10,16 @@
     <title>Spots</title>
   </head>
   <body>
+    <!-- Main Page Container -->
     <div class="page">
+      <!-- Header -->
       <header class="header">
         <img src="./images/Logo.svg" alt="logo" class="header__logo" />
       </header>
+
+      <!-- Main Content -->
       <main class="content">
+        <!-- Profile Section -->
         <section class="profile">
           <div class="profile__container">
             <img
@@ -27,7 +32,6 @@
                 <h1 class="profile__name">John Doe</h1>
                 <p class="profile__desc">Civil Aviator</p>
               </div>
-
               <button class="profile__edit-btn" type="button">
                 <img
                   src="./images/Pencil.svg"
@@ -47,88 +51,46 @@
             New Post
           </button>
         </section>
-        <section class="cards">
+
+        <!-- Cards Section -->
+        <section class="cards page__section">
           <ul class="cards__list">
-            <li class="card">
-              <img
-                src="./images/Snowy-Window.jpg"
-                alt="Snowy Window"
-                class="card__image"
-              />
-              <div class="card__content">
-                <h2 class="card__title">Val Thorens</h2>
-                <button type="button" class="card__like-btn"></button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                src="./images/Resturaunt-Front.jpg"
-                alt="Resturaunt terrace"
-                class="card__image"
-              />
-              <div class="card__content">
-                <h2 class="card__title">Restaurant terrace</h2>
-                <button type="button" class="card__like-btn"></button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                src="./images/Outdoor-Cafe.jpg"
-                alt="Outdoor Cafe"
-                class="card__image"
-              />
-              <div class="card__content">
-                <h2 class="card__title">An outdoor cafe</h2>
-                <button type="button" class="card__like-btn"></button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                src="./images/Forest-Bridge.jpg"
-                alt="Long bridge over the forest"
-                class="card__image"
-              />
-              <div class="card__content">
-                <h2 class="card__title">A very long bridge, over the forest</h2>
-                <button type="button" class="card__like-btn"></button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                src="./images/Tunnel-With-Light.jpg"
-                alt="Tunnel with morning light"
-                class="card__image"
-              />
-              <div class="card__content">
-                <h2 class="card__title">Tunnel with morning light</h2>
-                <button type="button" class="card__like-btn"></button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                src="./images/Snowy-Cabin.jpg"
-                alt="Snowy Cabin"
-                class="card__image"
-              />
-              <div class="card__content">
-                <h2 class="card__title">Mountain house</h2>
-                <button type="button" class="card__like-btn"></button>
-              </div>
-            </li>
+            <!-- Card Template -->
+            <template id="card-template">
+              <li class="card">
+                <img src="" alt="" class="card__image" />
+                <div class="card__footer">
+                  <h2 class="card__title"></h2>
+                  <button
+                    aria-label="like-card"
+                    class="card__like-button"
+                    type="button"
+                  ></button>
+                </div>
+                <button type="button" class="card__delete-button">
+                  <img class="card__delete-icon" />
+                </button>
+              </li>
+            </template>
           </ul>
         </section>
       </main>
+
+      <!-- Footer -->
       <footer class="footer">
         <p class="footer__text">2025 © Spots</p>
       </footer>
     </div>
+
+    <!-- Modals -->
+    <!-- Edit Profile Modal -->
     <div class="modal" id="edit-profile-modal">
       <div class="modal__container">
         <div class="modal__header">
           <h2 class="modal__title">Edit profile</h2>
           <button type="button" class="modal__close-btn">
             <img
-              src="./images/Close-icon.svg"
+              src="./images/close-icon.svg"
               alt="close-button"
               class="modal__close-btn-icon"
             />
@@ -158,13 +120,14 @@
       </div>
     </div>
 
+    <!-- New Post Modal -->
     <div class="modal" id="new-post-modal">
       <div class="modal__container">
         <div class="modal__header">
           <h2 class="modal__title">New post</h2>
           <button type="button" class="modal__close-btn">
             <img
-              src="./images/Close-icon.svg"
+              src="./images/close-icon.svg"
               alt="close-button"
               class="modal__close-btn-icon"
             />
@@ -193,6 +156,23 @@
         </form>
       </div>
     </div>
+
+    <!-- Preview Modal -->
+    <div class="modal" id="preview-modal">
+      <div class="modal__container modal__container_preview">
+        <button type="button" class="modal__close-btn">
+          <img
+            src="./images/close-icon.svg"
+            alt="close-button"
+            class="modal__close-btn-icon"
+          />
+        </button>
+        <img src="" alt="" class="modal__preview-image" />
+        <p class="modal__caption"></p>
+      </div>
+    </div>
+
+    <!-- Scripts -->
     <script src="scripts/index.js"></script>
   </body>
 </html>
