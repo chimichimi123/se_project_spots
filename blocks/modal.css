@@ -38,6 +38,7 @@
   box-sizing: border-box;
 }
 
+/* regular close button */
 .modal__close-btn {
   border: 0;
   background: none;
@@ -51,16 +52,31 @@
   position: absolute;
   top: -40px;
   right: -40px;
-  background: url("../images/Close-icon.svg") center no-repeat;
+  background: url("../images/close-grey.svg") center no-repeat;
   background-size: contain;
   opacity: 0.4;
   transition: opacity 0.3s ease;
 }
 
+/* Regulr modal close button hoverr */
 .modal__close-btn:hover {
   opacity: 1;
+}
+
+/* Preview modal close btn */
+.modal__close-btn_preview {
+  background: #212121;
+  border-radius: 4px;
+  opacity: 1;
+  padding: 8px;
+  right: -50px;
+  top: 0;
+  background: url("../images/Close-icon.svg") center no-repeat;
+}
+
+.modal__close-btn_preview:hover {
+  opacity: 0.8;
   background: url("../images/Close-icon-hover.svg") center no-repeat;
-  background-size: contain;
 }
 
 .modal__title {
