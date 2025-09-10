@@ -55,9 +55,9 @@
   position: static; /* Remove absolute positioning */
 }
 
-/* Regulr modal close button hoverr */
+/* Regular modal close button hover */
 .modal__close-btn:hover {
-  background: url("../images/close-icon-L-hover.svg") center no-repeat;
+  opacity: 0.4;
 }
 
 /* Preview modal close btn */
@@ -203,7 +203,7 @@
 
   .modal__container_preview .modal__close-btn {
     right: 5px;
-    top: -40px;
+    top: -30px;
   }
 }
 
