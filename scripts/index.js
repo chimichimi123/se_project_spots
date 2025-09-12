@@ -57,6 +57,11 @@ const editProfileForm = editProfileModal.querySelector(".modal__form");
 const newPostBtn = document.querySelector(".profile__new-post");
 const newPostModal = document.querySelector("#new-post-modal");
 const newPostCloseBtn = newPostModal.querySelector(".modal__close-btn");
+const newPostForm = newPostModal.querySelector(".modal__form");
+const newPostImageInput = newPostModal.querySelector("#card-image-input");
+const newPostTitleInput = newPostModal.querySelector(
+  "#image-description-input"
+);
 
 // Preview Modal Elements
 const previewModal = document.querySelector("#preview-modal");
@@ -101,20 +106,16 @@ function deleteCard(evt) {
 // Modal Functions
 function openModal(modal) {
   modal.classList.add("modal_is-opened");
-  requestAnimationFrame(() => {
-    modal.classList.add("modal_visible");
-  });
+  modal.classList.add("modal_visible");
 }
 
 function closeModal(modal) {
-  modal.classList.remove("modal_visible");
-  modal.addEventListener(
-    "transitionend",
+  modal.classList.remove("modal_is-opened");
+  "transitionend",
     () => {
       modal.classList.remove("modal_is-opened");
     },
-    { once: true }
-  );
+    { once: true };
 }
 
 // Form Handlers
@@ -123,6 +124,18 @@ function handleEditProfileSubmit(evt) {
   profileNameEl.textContent = editProfileNameInput.value;
   profileDescriptionEl.textContent = editProfileDescriptionInput.value;
   closeModal(editProfileModal);
+}
+
+function handleNewPostSubmit(evt) {
+  evt.preventDefault();
+  const name = newPostTitleInput.value;
+  const link = newPostImageInput.value;
+
+  const cardElement = getCardElement({ name, link });
+  cardsList.prepend(cardElement);
+
+  closeModal(newPostModal);
+  evt.target.reset();
 }
 
 // Event Listeners
@@ -139,6 +152,7 @@ newPostBtn.addEventListener("click", () => openModal(newPostModal));
 newPostCloseBtn.addEventListener("click", () => closeModal(newPostModal));
 previewCloseBtn.addEventListener("click", () => closeModal(previewModal));
 editProfileForm.addEventListener("submit", handleEditProfileSubmit);
+newPostForm.addEventListener("submit", handleNewPostSubmit);
 
 // Initialize Cards
 initialCards.forEach((item) => {
